@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>TalentLens Result</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="topbar">
+
+<h2>TalentLens Dashboard</h2>
+
+<a href="/logout">
+<button class="logout-btn">Logout</button>
+</a>
+
+</div>
+
+
+<div class="container">
+
+<div class="welcome-card">
+
+<h2>Welcome {{ username }} 👋</h2>
+
+<p><b>Branch:</b> {{ branch }}</p>
+<p><b>Career Goal:</b> {{ goal }}</p>
+<p><b>Level:</b> {{ level }}</p>
+<p><b>Learning Preference:</b> {{ learning }}</p>
+
+</div>
+
+
+<div class="section">
+
+<h3>Skill Completion</h3>
+
+<div class="progress">
+    <div class="progress-bar" id="progressBar">
+        {{ progress }}%
+    </div>
+</div>
+
+<p>Your Skill Match Score: <b>{{ progress }}%</b></p>
+
+<script>
+let p = {{ progress }};
+document.getElementById("progressBar").style.width = p + "%";
+</script>
+
+
+<div class="section">
+
+<h3>Skill Analysis</h3>
+
+<div class="skill-box">
+
+<div class="card found">
+
+<h4>Skills You Have</h4>
+
+<ul>
+{% for skill in found %}
+<li>{{ skill }}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+
+<div class="card missing">
+
+<h4>Skills You Need To Learn</h4>
+
+<ul>
+{% for skill in missing %}
+<li>{{ skill }}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<h3>Skill Analysis Graph</h3>
+
+<div style="text-align:center; margin-top:15px;">
+
+<img src="{{ graph }}" width="450">
+
+</div>
+
+<p style="text-align:center; margin-top:10px;">
+Your Skill Match Score: <b>{{ progress }}%</b>
+</p>
+
+</div>
+
+<div class="section">
+
+<h3>Skill Categories</h3>
+
+{% for category, skills in categories.items() %}
+
+<h4>{{ category }}</h4>
+
+<ul>
+
+{% for skill in skills %}
+<li>{{ skill }}</li>
+{% endfor %}
+
+</ul>
+
+{% endfor %}
+
+</div>
+
+<div class="section">
+
+<h3>Learning Resources</h3>
+
+{% for skill, links in resources.items() %}
+
+<h4>{{ skill }}</h4>
+
+<ul>
+
+{% for link in links %}
+<li><a href="{{ link }}" target="_blank">{{ link }}</a></li>
+{% endfor %}
+
+</ul>
+
+{% endfor %}
+
+</div>
+
+<div class="section">
+
+<h3>Skill Priority Recommendation</h3>
+
+<div class="skill-box">
+
+<div class="card high">
+
+<h4>High Priority Skills</h4>
+
+<ul>
+{% for skill in high_priority %}
+<li>{{ skill }}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+<div class="card medium">
+
+<h4>Medium Priority Skills</h4>
+
+<ul>
+{% for skill in medium_priority %}
+<li>{{ skill }}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+<div class="card low">
+
+<h4>Low Priority Skills</h4>
+
+<ul>
+{% for skill in low_priority %}
+<li>{{ skill }}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h3>Career Roadmap</h3>
+
+<ol>
+
+{% for step in roadmap %}
+<li>{{ step }}</li>
+{% endfor %}
+
+</ol>
+
+</div>
+
+
+</div>
+
+</body>
+</html>

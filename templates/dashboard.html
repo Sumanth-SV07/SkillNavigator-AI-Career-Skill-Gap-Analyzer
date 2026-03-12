@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>User Information</h2>
+
+<form method="POST">
+
+<select name="branch">
+<option>Computer Science</option>
+<option>Information Science</option>
+<option>Electronics</option>
+</select>
+
+<select name="goal">
+
+<option>Artificial Intelligence Engineer</option>
+<option>Data Scientist</option>
+<option>Machine Learning Engineer</option>
+<option>Software Developer</option>
+<option>Web Developer</option>
+<option>Data Analyst</option>
+<option>Cyber Security Analyst</option>
+<option>Cloud Engineer</option>
+<option>DevOps Engineer</option>
+<option>Database Administrator</option>
+<option>Network Engineer</option>
+<option>IoT Engineer</option>
+<option>Embedded Systems Engineer</option>
+<option>Robotics Engineer</option>
+<option>Mobile App Developer</option>
+<option>System Administrator</option>
+<option>Business Intelligence Analyst</option>
+<option>Big Data Engineer</option>
+<option>Computer Vision Engineer</option>
+<option>NLP Engineer</option>
+
+</select>
+
+<select name="level">
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+</select>
+
+<select name="learning">
+<option>Video Courses</option>
+<option>Documentation</option>
+</select>
+
+<button type="submit">Continue</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
