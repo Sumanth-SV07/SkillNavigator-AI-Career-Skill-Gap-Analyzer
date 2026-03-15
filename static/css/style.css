@@ -1,0 +1,213 @@
+body{
+font-family: Arial, sans-serif;
+background:url("/static/images/background.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+background-attachment:fixed;
+margin:0;
+padding:0;
+}
+
+/* Top bar */
+
+.topbar{
+background:#1f3c88;
+color:white;
+padding:15px 25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logout-btn{
+background:#ff4d4d;
+color:white;
+border:none;
+padding:8px 16px;
+border-radius:5px;
+cursor:pointer;
+font-size:14px;
+}
+
+.logout-btn:hover{
+background:#e60000;
+}
+
+/* Container */
+
+.container{
+width:80%;
+margin:30px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.15);
+}
+
+/* Sections */
+
+.section{
+margin-top:30px;
+}
+
+/* Skill cards */
+
+.skill-box{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.welcome-card{
+background:#f5f8ff;
+padding:20px;
+border-radius:8px;
+margin-bottom:20px;
+border-left:5px solid #1f3c88;
+}
+
+.card{
+flex:1;
+padding:20px;
+border-radius:8px;
+box-shadow:0px 3px 8px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-3px);
+}
+
+.found{
+background:#e6ffe6;
+}
+
+.missing{
+background:#ffe6e6;
+}
+
+/* Progress bar */
+/* Progress bar container */
+
+.progress{
+background:#ddd;
+height:28px;
+border-radius:20px;
+overflow:hidden;
+margin-top:10px;
+position:relative;
+}
+
+/* Filled progress */
+
+.progress-bar{
+background:linear-gradient(90deg,#4CAF50,#2ecc71);
+height:100%;
+color:white;
+font-weight:bold;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:20px;
+transition:width 0.6s ease;
+}
+
+
+/* Lists */
+
+ul{
+padding-left:20px;
+}
+
+li{
+margin:5px 0;
+}
+
+/* Graph */
+
+img{
+margin-top:15px;
+border-radius:5px;
+}
+
+/* Links */
+
+a{
+color:#1f3c88;
+text-decoration:none;
+}
+
+/* Center form pages */
+
+.box{
+width:400px;
+margin:120px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.15);
+text-align:center;
+}
+
+.box input,
+.box select{
+width:90%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.box button{
+padding:10px 20px;
+background:#1f3c88;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.box button:hover{
+background:#162c66;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+.high{
+background:#ffe6e6;
+border-left:6px solid red;
+}
+
+.medium{
+background:#fff5cc;
+border-left:6px solid orange;
+}
+
+.low{
+background:#e6f7ff;
+border-left:6px solid #007bff;
+}
+
+/* Section Headings */
+
+.section h3{
+font-size:22px;
+font-weight:bold;
+color:#1f3c88;
+margin-bottom:10px;
+border-bottom:3px solid #1f3c88;
+padding-bottom:5px;
+display:inline-block;
+}
+
+/* Sub headings */
+
+.section h4{
+font-size:18px;
+font-weight:bold;
+color:#333;
+text-decoration:underline;
+margin-bottom:8px;
+}
